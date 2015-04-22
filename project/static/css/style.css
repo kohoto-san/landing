@@ -1,0 +1,436 @@
+body, html{
+	height: 100%;
+	margin: 0;
+	background-color: black;
+	overflow-x: hidden;
+}
+
+#bg{ 
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+	opacity: 0.6;
+}
+
+.bgwidth{  width: 100%; }
+.bgheight{ height: 100%; }
+
+.product{
+
+	position: absolute;
+	width: 70%;
+
+	top: 60px;
+	left: 10%;
+
+	font-weight: normal;
+    color: white;
+    z-index: 10;
+
+}
+
+.product .name{
+	font-size: 47px;
+}
+
+.product .slogan{
+	position: absolute;
+	margin-left: 25%;
+
+	font-size: 20px;
+}
+
+.topbar{
+    text-align: right;
+    margin-top: -45px;
+    margin-right: -150px;
+}
+
+.topbar a{
+    color: #D6ECE7;
+}
+
+.topbar-a{
+    font-family: Sans, Arial;
+    text-transform: uppercase;
+    font-style: oblique;
+
+	text-decoration: none;
+	display: inline-block;
+	margin: 0 0 0 30px;
+}
+
+.topbar-h4{
+	margin: 0;
+	/* 
+	top: 21px; 
+	position: relative;
+	*/
+}
+
+.topbar-a:hover{
+	color: #99CCFF;
+}
+
+#main{
+	position: absolute;
+	width: 100%;
+	top: 180px;
+	z-index: 10;
+
+}
+
+.description{
+	display: inline-block;
+	position: relative;
+
+    width: 90%;
+	
+	max-width: 480px;
+	min-width: 100px;
+
+	left: 10%;
+
+	/* background-color: lightgrey; */
+
+	font-size: 25px;
+	font-weight: normal;
+    color: white;
+
+    overflow-wrap: normal;
+
+    line-height: 35px;
+    text-shadow: none;
+    font-family: sans-serif;
+}
+
+.sub_div{
+	display: inline-block;
+	position: relative;
+
+	left: 190px;
+    top: -40px;
+}
+
+
+
+.starting{
+	/* background-color: lightgrey; */
+
+	margin-top: 20px;
+	margin-left: 0;
+
+	font-size: 30px;
+	font-weight: normal;
+    color: white;
+}
+
+.clock{
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 47px;
+    font-weight: normal;
+    color: #f90200;
+}
+#clock{
+    margin-left: -5px;
+}
+
+
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+
+.subscribe{
+
+	margin-top: 20px;
+
+	font-size: 1.05em;
+	font-family: 'Raleway', Arial, sans-serif;
+}
+
+
+/*
+.forma{
+	display: inlineblock;
+	width: 70%;
+	font-size: 150%;
+}
+*/
+
+
+.overlay{
+	position:fixed; 
+	z-index:990;
+
+	opacity:0.5; 
+	filter:alpha(opacity=50); 
+
+	top:0; 
+	right:0; 
+	left:0; 
+	bottom:0; 
+
+	background:#000;
+}
+
+.popup{
+	position: fixed;
+	background-color: white;
+
+	height: 500px;
+	width: 700px;
+	z-index: 1000;
+	border-radius: 6px;
+}
+
+.top-popup{
+	height: 100px;
+	width: 100%;
+	background-color: blue;
+	border-radius: 6px 6px 0px 0px
+}
+
+.top-popup h1{
+	color: #ffffff;
+	font-size: 30px;
+    font-weight: 300;
+    margin: 0;
+    padding: 23px 0;
+    font-family: "open sans","helvetica neue",helvetica,arial,sans-serif;
+    text-align: center;
+}
+
+.popup .socials{
+	position: relative;
+	margin-top: 40px;
+	width: 100%;
+}
+
+.socials img{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+}
+
+.socials img:hover{
+	opacity: 0.7;
+}
+
+.popup a{
+	text-decoration: none;
+}
+
+.popup .centr-thanks{
+	width: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+}
+
+.popup .desc-share{
+	width: 100%;
+}
+
+.popup h2{
+	color: #66757f;
+	font-size: 22px;
+    font-weight: 300;
+    line-height: 26px;
+    margin: 20px 0;
+    font-family: sans-serif;
+	text-align: center;
+}
+
+.popup .popup-bar{
+	position: relative;
+
+	top: 150px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.textbox {
+    font-family: 'Montserrat', arial, sans-serif;
+    border: 1px solid #c4c4c4;
+    height: 52px;
+    padding: 0 0 0 10;
+    width: 300px;
+    font-size: 26px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+.textbox:focus {
+    outline: none;
+    border: 1px solid #7bc1f7;
+    box-shadow: 0px 0px 8px #7bc1f7;
+    -moz-box-shadow: 0px 0px 8px #7bc1f7;
+    -webkit-box-shadow: 0px 0px 8px #7bc1f7;
+}
+
+.css_button_4 {
+    border: 0px solid transparent;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-family:'Montserrat',arial, helvetica, sans-serif;
+    padding: 15px;
+    text-decoration:none;
+    display:inline-block;
+    color: #ffffff;
+    background-color: #1abc9c;
+    font-size: 18px;
+    position: relative;
+    bottom: 3px;
+}
+
+.css_button_4:hover{
+    border: 0px solid transparent;
+    background-color: #03876D;
+}
+
+#subscribeForm{
+    width: 400px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+.subscribe_center{
+	position: relative;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.error_form{
+	font-family: "PT Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 1.15rem;
+}
+
+@media all and (max-width: 1150px) {
+	.sub_div {
+	    left: 80px;
+	}
+	.description{
+		left: 5%;
+	}
+}
+
+@media all and (max-width: 1010px) {
+	.sub_div {
+	    display: block;
+	    left: 20px;
+	    top: 10px;
+	    margin-left: auto;
+	    margin-right: auto;
+	    width: 508px;
+	    margin-bottom: 10px;
+	}
+	.description{
+	    display: block;
+	    left: 20px;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+	#main{
+		top: 100px;
+	}
+	.product{
+	    top: 20px;
+	}
+    #subscribeForm {
+        margin-left: 0;
+    }
+
+    .starting {
+        margin-left: 0;
+    }
+    #clock{
+    	margin-left: 0;
+    }
+
+}
+
+@media all and (max-width: 850px) {
+	.topbar-a{
+		margin-right: 80px;
+	}
+}
+
+@media all and (max-width: 750px) {
+	.popup{
+		position: absolute;
+	    height: 100%;
+	    width: 100%;
+	    z-index: 1000;
+	}
+
+	.top-a{
+		left: 0;
+	}
+
+}
+
+@media all and (max-width: 650px) {
+	.socials{
+		left: 20px;
+	}
+}
+
+@media all and (max-width: 600px) {
+	.description{
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.sub_div{
+		margin-left: 10px;
+		margin-right: 10px;	
+	}
+}
+
+
+@media all and (max-width: 500px) {
+	.css_button_4{
+		display: block;
+		margin-right: 0;
+		margin-left: 20px;
+		top: 5px;
+		padding: 15px 105px;
+	}
+	
+	#subscribeForm{
+        margin-left: 0;
+	}
+
+	.topbar{
+		top: 50px;
+        position: relative;
+	}
+	#main{
+		top: 130px;
+	}
+}
+
+
+
+
+
+
+
+/* rebeccapurple */
+
+/*
+@media screen and (max-width: 50em) {
+	.codrops-header {
+		padding: 3em 10% 4em;
+	}
+}
+
+@media screen and (max-width: 40em) {
+	.codrops-header h1 {
+		font-size: 2.8em;
+	}
+}
+*/

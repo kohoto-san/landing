@@ -1,0 +1,79 @@
+{% extends "landing/index.html" %}
+
+  {% block body %}
+
+    <div class="overlay"></div>
+
+    {{ block.super }}
+
+
+
+    {% block popup-blok %}
+
+      <div class="popup"> 
+
+        <div class="top-popup">
+          <h1> Thank you! </h1>
+        </div>
+
+        <div class="centr-thanks">
+
+        <div class="desc-share">
+          <!-- <h2> Чтобы увеличить свои шансы на получение инвайта не забудьте поделиться в соц. сетях! Чем больше делитесь - тем больше ваши шансы получить инвайт. </h2>
+          -->
+
+          <h2> sharing is caring </h2>
+        </div>
+
+        <div class="socials">
+
+          {% load staticfiles %}
+
+          <a href="test1"> <img src="{% static 'img/twitter.png' %}" />    </a>
+          <a href="test2"> <img src="{% static 'img/facebook.png' %}" />   </a>   
+          <a href="test3"> <img src="{% static 'img/pinterest.png' %}" />  </a>  
+          <a href="test4"> <img src="{% static 'img/google.png' %}" />     </a>  
+          <a href="test5"> <img src="{% static 'img/instagram.png' %}" />  </a>  
+
+        </div>
+
+      </div>
+
+
+      </div>
+
+
+
+
+
+
+      <script type="text/javascript">
+
+        if( $(window).width() > 750 ){
+          $('.popup').css('height', '400px');
+        }
+        else{
+          $('.popup-bar').css('left', 0);
+          $('.popup-bar').css('top', '50px');
+        }
+
+        boxWidth = $('.popup').width();
+        boxHeight = $('.popup').height();
+
+        winWidth = $(window).width();
+        winHeight = $(window).height();
+
+        width = (winWidth - boxWidth) / 2;
+        height = (winHeight - boxHeight) / 2;
+
+        $('.popup').css({ 'left': width+'px', 'top': height+'px' });
+
+        // $('.desc-share').css('margin-left', '10px');
+
+      </script>
+
+
+    {% endblock %}
+
+
+  {% endblock %}

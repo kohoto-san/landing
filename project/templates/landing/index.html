@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+    
+    <!--
+    <link rel="shortcut icon" href="../favicon.ico"> 
+    -->
+
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="http://cdn.rawgit.com/hilios/jQuery.countdown/2.0.4/dist/jquery.countdown.min.js"></script>
+
+    <script src="http://malsup.github.io/jquery.form.js"></script> 
+
+    
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css' />
+
+
+    
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+    </head>
+
+
+<!-- || <HR /> || -->
+    
+    <body>
+
+    {% block body %}
+
+        {% load staticfiles %}
+        <img src="{% static 'img/bg2.jpg' %}" id="bg" alt="">
+
+
+        <div class="product">
+
+            <div class="name"> 
+                NameProduct 
+            </div>
+
+            <!--
+            <div class="slogan">
+                Slogan. Slogan. Slogan
+            </div>
+            -->
+
+            <div class="topbar">
+                <a href="about" class="topbar-a"> <h4 class="topbar-h4"> About </h4> </a>
+                
+                <!--
+                <a href="press" class="topbar-a"> <h4 class="topbar-h4"> Press </h4> </a>
+                -->
+            </div>
+
+        </div>
+
+
+
+        <div id="main">
+
+
+            <div class="description">
+
+            Discover the wonderful world travel. Meeting with people in all world. And traveling with minimal costs. Tibaku будет доступен только по приглашениям, поэтому не забудьте подписаться на новости, чтобы получить инвайт одним из первых.
+
+            </div> 
+
+
+            <div class="sub_div">
+
+                <div class="starting">
+                    <!-- До старта осталось: -->
+                    We will start through:
+                </div>
+
+
+                <div id="clock"> </div>
+
+                <!--
+                <div class="starting">
+                    Подпишись!
+                </div>
+                -->
+
+
+{% block subscribe %}
+
+                <div class="subscribe">
+
+
+                    <form action="/subscribe" method="post" id="subscribeForm" role="form">
+
+                        {% csrf_token %}
+
+
+                    <!--
+                    <input type="text" id="number" name="number" class="textbox"  placeholder="Desc" pattern="\d*" oninvalid="setCustomValidity('Please enter numbers only i.e 19175551234')">
+                    -->
+
+
+
+                    <!--
+                        <p>
+                            <label for="id_email">Location:</label> 
+                            <input id="id_email" type="text"  name="email" class="textbox"  placeholder="Desc" oninvalid="setCustomValidity('Please enter numbers only i.e 19175551234')">
+                        </p>
+                    -->
+
+
+
+                        <input class="textbox" id="id_email" name="email" placeholder="Desc"
+                        oninvalid="check(this)"/>
+
+                        <input type="submit" value="Submit" class="css_button_4" />
+                    
+                    </form>
+
+                </div>
+
+{% endblock %}
+
+
+            </div>
+
+        </div>
+
+
+
+        <script>
+
+        $('#main').css('width', '100%');
+
+        $(window).load(function() {    
+
+            var theWindow        = $(window),
+                $bg              = $("#bg"),
+                aspectRatio      = $bg.width() / $bg.height();
+                                    
+            function resizeBg() {
+
+                max = $(window).width();
+            
+                if ( (theWindow.width() / theWindow.height()) < aspectRatio ) {
+
+                    $bg
+                        .removeClass()
+                        .addClass('bgheight');
+
+                    $bg.css('max-width', max);
+
+                } else {
+ 
+
+                    $bg
+                        .removeClass()
+                        .addClass('bgwidth');
+
+                    $bg.css('max-width', max);
+                }
+                        
+            }
+                                
+            theWindow.resize(resizeBg).trigger("resize");
+
+        });
+
+        //var sixMonths = new Date(new Date().valueOf() + 6 * 30 * 24 * 60 * 60 * 1000);
+        var sixMonths   = new Date('05 04 2015 20:56:00 GMT+01000') 
+
+        $('#clock').countdown(sixMonths).on('update.countdown', function(event) {
+            var $this = $(this).html(event.strftime(''
+              + '<span class="clock">%-D</span> '
+              + '<span class="clock">:</span>'
+
+
+              + '<span class="clock">%H</span>'
+              + '<span class="clock">:</span>'
+
+              + '<span class="clock">%M</span>'
+              + '<span class="clock">:</span>'
+
+              + '<span class="clock">%S</span>'
+            ));
+
+            'days. hr, min, sec'
+        });
+ 
+        </script>
+
+
+        {% endblock %}
+
+    </body>
+
+
+</html>

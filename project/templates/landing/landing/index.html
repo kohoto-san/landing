@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+    
+    <!--
+    <link rel="shortcut icon" href="../favicon.ico"> 
+    -->
+
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
+    <!-- FUCK -->
+    <link rel="stylesheet" type="text/css" href="../../static/css/style.css" />
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="http://cdn.rawgit.com/hilios/jQuery.countdown/2.0.4/dist/jquery.countdown.min.js"></script>
+
+    <script src="http://malsup.github.io/jquery.form.js"></script> 
+
+    
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css' />
+
+
+    
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+    </head>
+
+
+<!-- || <HR /> || -->
+    
+    <body>
+
+    {% block body %}
+
+
+
+        <!-- FUCK 
+
+        {% load staticfiles %}
+        <img src="{% static 'img/bg2.jpg' %}" id="bg" alt="">
+
+        -->
+        <img src="../../static/img/bg2.jpg" id="bg" alt="">
+
+
+
+
+        <div class="product">
+
+            <div class="name"> 
+                NameProduct 
+            </div>
+
+            <div class="slogan">
+                Slogan. Slogan. Slogan
+            </div>
+
+            <div class="topbar">
+                <a href="about" class="topbar-a"> <h4 class="topbar-h4"> About </h4> </a>
+                <a href="press" class="topbar-a"> <h4 class="topbar-h4"> Press </h4> </a>
+            </div>
+
+        </div>
+
+
+
+        <div id="main">
+
+
+            <div class="description">
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque sit amet sapien sit amet facilisis. Quisque id malesuada ex. Proin vitae elit lectus. Quisque faucibus volutpat convallis. Maecenas elementum turpis fermentum, dictum purus non, pharetra elit. Fusce quam lorem, blandit in euismod et, tristique a est. Quisque et luctus lectus, et sagittis augue. Integer tempus, sapien at vestibulum rutrum, massa dui interdum quam, ac porttitor ipsum felis sit amet urna. Vivamus cursus a magna sed interdum.
+
+            </div> 
+
+
+            <div class="sub_div">
+
+                <div class="starting">
+                    До старта осталось:
+                </div>
+
+
+                <div id="clock"> </div>
+
+                <!--
+                <div class="starting">
+                    Подпишись!
+                </div>
+                -->
+
+
+
+                <div class="subscribe">
+
+
+                    <style>
+                      .textbox {
+    font-family: 'Montserrat', arial, sans-serif;
+    border: 1px solid #c4c4c4;
+    height: 52px;
+    padding: 0 0 0 10;
+    width: 300px;
+    font-size: 26px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+  }
+
+.textbox:focus {
+    outline: none;
+    border: 1px solid #7bc1f7;
+    box-shadow: 0px 0px 8px #7bc1f7;
+    -moz-box-shadow: 0px 0px 8px #7bc1f7;
+    -webkit-box-shadow: 0px 0px 8px #7bc1f7;
+}
+
+  .css_button_4 {
+    border: 0px solid transparent;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-family:'Montserrat',arial, helvetica, sans-serif;
+    padding: 15px;
+    text-decoration:none;
+    display:inline-block;
+    color: #ffffff;
+    background-color: #1abc9c;
+    font-size: 18px;
+    position: relative;
+    bottom: 3px;
+    }
+
+    .css_button_4:hover{
+     border: 0px solid transparent;
+     background-color: #03876D;
+    }
+
+    #subscribeForm{
+        margin-left: 20px;
+    }
+ </style>
+
+                    <form action="subscribe" method="post" id="subscribeForm" role="form" onSubmit='validate(); return false;'>
+
+                        <!-- {% csrf_token %} -->
+
+
+
+                        <input class="textbox" id="id_email" name="email" placeholder="Desc"
+                        oninvalid="check(this)"/>
+
+                        <input type="submit" value="Submit" class="css_button_4" />
+                    
+                    </form>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="footer">
+
+        </div>
+
+
+        <script>
+
+            function validateEmail(email) { 
+  
+                var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            
+                return re.test(email);
+
+            }
+
+            function validate(){
+
+                var email = $("#id_email").val();
+                if (validateEmail(email)) 
+                {
+                   alert(email + " is valid :) ");
+                } 
+                else 
+                {
+                    alert(email + "is not valid :( ");
+                    $('#id_email').$('input').setCustomValidity('Debe completar este campo.');
+                }
+                return false;
+            }
+
+
+
+
+
+        $('#main').css('width', '100%').css('width', '-=180px');
+
+
+
+
+        $(window).load(function() {    
+
+            var theWindow        = $(window),
+                $bg              = $("#bg"),
+                aspectRatio      = $bg.width() / $bg.height();
+                                    
+            function resizeBg() {
+            
+                if ( (theWindow.width() / theWindow.height()) < aspectRatio ) {
+                    $bg
+                        .removeClass()
+                        .addClass('bgheight');
+                } else {
+                    $bg
+                        .removeClass()
+                        .addClass('bgwidth');
+                }
+                        
+            }
+                                
+            theWindow.resize(resizeBg).trigger("resize");
+
+        });
+
+        //var sixMonths = new Date(new Date().valueOf() + 6 * 30 * 24 * 60 * 60 * 1000);
+        var sixMonths   = new Date('05 04 2015 20:56:00 GMT+01000') 
+
+        $('#clock').countdown(sixMonths).on('update.countdown', function(event) {
+            var $this = $(this).html(event.strftime(''
+              + '<span class="clock">%-D</span> '
+              + '<span class="clock">:</span>'
+
+
+              + '<span class="clock">%H</span>'
+              + '<span class="clock">:</span>'
+
+              + '<span class="clock">%M</span>'
+              + '<span class="clock">:</span>'
+
+              + '<span class="clock">%S</span>'
+            ));
+
+            'days. hr, min, sec'
+        });
+ 
+        </script>
+
+
+        {% endblock %}
+
+    </body>
+
+
+</html>
