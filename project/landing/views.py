@@ -21,7 +21,6 @@ def form(request):
                 obj = Emails(email = mail)
                 obj.save()
                 status = 1
-                return HttpResponseRedirect('/thanks/')
 
             # Emails.objects.get_or_create(email = mail)
         else:

@@ -1,14 +1,39 @@
-{% extends "landing/index.html" %}
+<!DOCTYPE html>
 
-  {% block body %}
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+    
+    <!--
+    <link rel="shortcut icon" href="../favicon.ico"> 
+    -->
+
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+    <script src="{% static 'bg.js' %}"></script>
+    <script src="{% static 'popup.js' %}"></script>
+
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<link href='http://fonts.googleapis.com/css?family=PT+Sans%3Aregular%2Citalic%2C700%7CRoboto+Slab%3Aregular%2C700&subset=latin%2Ccyrillic&ver=1.3.2' rel='stylesheet' type='text/css' />
+
+
+
+    </head>
+
+<body>
+
 
     <div class="overlay"></div>
 
-    {{ block.super }}
-
-
-
-    {% block popup-blok %}
+      <img src="" id="bg" alt="">
 
       <div class="popup"> 
 
@@ -19,10 +44,16 @@
         <div class="centr-thanks">
 
         <div class="desc-share">
-          <!-- <h2> Чтобы увеличить свои шансы на получение инвайта не забудьте поделиться в соц. сетях! Чем больше делитесь - тем больше ваши шансы получить инвайт. </h2>
-          -->
+
+
+          <h2> Sharing with friends and increase your chance take invite!</h2>
+
+          <!--
+          <h2> Чтобы увеличить свои шансы на получение инвайта не забудьте поделиться в соц. сетях! Чем больше делитесь - тем больше ваши шансы получить инвайт. </h2>
 
           <h2> sharing is caring </h2>
+          -->
+          
         </div>
 
         <div class="socials">
@@ -42,38 +73,5 @@
 
       </div>
 
-
-
-
-
-
-      <script type="text/javascript">
-
-        if( $(window).width() > 750 ){
-          $('.popup').css('height', '400px');
-        }
-        else{
-          $('.popup-bar').css('left', 0);
-          $('.popup-bar').css('top', '50px');
-        }
-
-        boxWidth = $('.popup').width();
-        boxHeight = $('.popup').height();
-
-        winWidth = $(window).width();
-        winHeight = $(window).height();
-
-        width = (winWidth - boxWidth) / 2;
-        height = (winHeight - boxHeight) / 2;
-
-        $('.popup').css({ 'left': width+'px', 'top': height+'px' });
-
-        // $('.desc-share').css('margin-left', '10px');
-
-      </script>
-
-
-    {% endblock %}
-
-
-  {% endblock %}
+</body>
+</html>
