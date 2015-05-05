@@ -14,5 +14,7 @@ urlpatterns = patterns('',
     url(r'^$', views.landing, name="index"),
     url(r'^subscribe$', views.form, name="subscribe"),
     url(r'^thanks/$', views.thanks, name="thanks"),
-    url(r'^about/$', views.about, name="about"),
+
+
+    #url(r'^about/$', views.about, name="about"),
 )

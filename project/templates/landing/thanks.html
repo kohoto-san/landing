@@ -60,11 +60,9 @@
 
           {% load staticfiles %}
 
-          <a href="test1"> <img src="{% static 'img/twitter.png' %}" />    </a>
-          <a href="test2"> <img src="{% static 'img/facebook.png' %}" />   </a>   
-          <a href="test3"> <img src="{% static 'img/pinterest.png' %}" />  </a>  
-          <a href="test4"> <img src="{% static 'img/google.png' %}" />     </a>  
-          <a href="test5"> <img src="{% static 'img/instagram.png' %}" />  </a>  
+          <img src="{% static 'img/twitter.png' %}" data-href="https://twitter.com/intent/tweet?hashtags=hashtag&text=Testasa"/>  
+          <img src="{% static 'img/facebook.png' %}" data-href="https://www.facebook.com/sharer/sharer.php?u=tabiku.com"/>    
+          <img src="{% static 'img/google.png' %}" data-href="https://plus.google.com/share?url=facebook.com"/>     
 
         </div>
 
@@ -72,6 +70,33 @@
 
 
       </div>
+
+      <script type="text/javascript">
+
+        $(window).load(function() { 
+
+          $('.socials img').click(function() {
+
+            var features, w = 500, h = 500;
+            var top = (screen.height - h)/2, left = (screen.width - w)/2;
+            if(top < 0) top = 0;
+            if(left < 0) left = 0;
+            features = 'top=' + top + ',left=' +left;
+            features += ',height=' + h + ',width=' + w + ',resizable=no';
+
+            href = $(this).attr('data-href');
+            target = $(this).attr('target');
+
+            window.open(href, target, features);
+            return false;
+
+          });
+
+
+        });
+
+
+      </script>
 
 </body>
 </html>
