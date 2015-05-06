@@ -5,34 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
     
-    <!--
-    <link rel="shortcut icon" href="../favicon.ico"> 
-    -->
-
     {% load staticfiles %}
+
+    <link rel="shortcut icon" href="{% static 'img/logo.ico' %}"> 
+
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
 
     <meta property="fb:app_id" content="883223215071316" />
 
     <meta property="og:url" content="http://tabiku.com"/>
     
-    <meta property="og:title" content="When Great Minds Don’t Think Alike" />
+    <meta property="og:title" content="Tabiku - Travels for all" />
     
-    <meta property="og:description" content="How much does culture influence creative thinking?" />
-    <meta property="og:image" content="http://tabiku.com/static/img/bg480.jpg" />
+    <meta property="og:description" content="Tabiku is website that allows people traveling with minimum costs" />
+    <meta property="og:image" content="http://tabiku.com/static/img/logo-big.png" />
 
     <meta property="og:type" content="website">
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script src="http://cdn.rawgit.com/hilios/jQuery.countdown/2.0.4/dist/jquery.countdown.min.js"></script>
+    
+    <script src="{% static 'jquery.countdown.min.js' %}"></script>
 
     <script src="{% static 'bg.js' %}"></script>
 
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
 
     </head>
 

@@ -5,11 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <!--
-    <link rel="shortcut icon" href="../favicon.ico"> 
-    -->
-
     {% load staticfiles %}
+
+    <link rel="shortcut icon" href="{% static 'img/logo.ico' %}"> 
+
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -49,11 +48,7 @@
 
           {% load staticfiles %}
 
-          <img src="{% static 'img/twitter.png' %}" data-href="https://twitter.com/intent/tweet?hashtags=hashtag&text=Testasa"/>
-
-          <!--  
-          data-href="https://www.facebook.com/dialog/share?app_id=883223215071316&display=popup&href=http://tabiku.com/thanks/&redirect_uri=http://tabiku.com"
-          -->
+          <img src="{% static 'img/twitter.png' %}" data-href="https://twitter.com/intent/tweet?text=tabiku.com is website that allows people traveling with minimum costs"/>
 
           <img src="{% static 'img/facebook.png' %}" data-href="https://www.facebook.com/sharer/sharer.php?u=tabiku.com"/>   
 
