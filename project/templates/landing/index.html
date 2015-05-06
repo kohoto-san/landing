@@ -1,12 +1,119 @@
-<!DOCTYPE html> <head> 
+<!DOCTYPE html>
 
-<meta property="og:title" content="Tabiku" />
-<meta property="og:description" content="description" />
-<meta property="og:image" content="/static/img/bg480.jpg" />
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+    
+    <!--
+    <link rel="shortcut icon" href="../favicon.ico"> 
+    -->
 
-<meta charset="UTF-8"/> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><!-- <link rel="shortcut icon" href="../favicon.ico"> -->{% load staticfiles %}<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/><!--[if IE]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]--> 
+    <meta property="og:url" content="http://tabiku.com"/>
+    
+    <!-- <meta property="og:title" content="When Great Minds Don’t Think Alike" /> -->
+    
+    <meta property="og:description" content="How much does culture influence creative thinking?" />
+    <meta property="og:image" content="http://tabiku.com/static/img/bg480.jpg" />
 
-</head>
+    <meta property="fb:app_id" content="883223215071316" />
 
 
- <body> <img src="" id="bg" alt=""> <div class="product"> <div class="name"> NameProduct </div></div><div id="main"> <div class="description"> Discover the wonderful world travel. Meeting with people in all world. And traveling with minimal costs. </br> </br> Tabiku will available only by invitations therefore you do not forget point your email to get a invitation and become one of the first users. </div><div class="sub_div"> <div class="starting"> We will start through: </div><div id="clock"> </div><div class="subscribe"> <form action="/subscribe" method="post" id="subscribeForm" role="form">{% csrf_token %}<input class="textbox" id="id_email" name="email" placeholder="Your email"/> <input type="submit" value="Submit" class="css_button_4"/> </form> </div></div></div><script>$(window).load(function(){var sixMonths=new Date('06 18 2015 17:00:00 GMT+01000') $('#clock').countdown(sixMonths).on('update.countdown', function(event){var $this=$(this).html(event.strftime('' + '<span class="clock">%-D</span> ' + '<span class="clock">:</span>' + '<span class="clock">%H</span>' + '<span class="clock">:</span>' + '<span class="clock">%M</span>' + '<span class="clock">:</span>' + '<span class="clock">%S</span>' )); 'days. hr, min, sec'});}); </script> <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> <script src="http://cdn.rawgit.com/hilios/jQuery.countdown/2.0.4/dist/jquery.countdown.min.js"></script> <script src="{% static 'bg.js' %}"></script> </body></html>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="http://cdn.rawgit.com/hilios/jQuery.countdown/2.0.4/dist/jquery.countdown.min.js"></script>
+
+    <script src="{% static 'bg.js' %}"></script>
+
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+    </head>
+
+    <body>
+
+        <img src="" id="bg" alt="">
+
+        <div class="product">
+
+            <div class="name"> 
+                NameProduct 
+            </div>
+
+        </div>
+
+        <div id="main">
+
+            <div class="description">
+
+            Discover the wonderful world travel. Meeting with people in all world. And traveling with minimal costs. 
+
+            </br>
+            </br>
+
+            Tabiku will available only by invitations therefore you do not forget point your email to get a invitation and become one of the first users.
+
+            </div> 
+
+            <div class="sub_div">
+
+                <div class="starting">
+                    We will start through:
+                </div>
+
+                <div id="clock"> </div>
+
+                <div class="subscribe">
+
+                    <form action="/subscribe" method="post" id="subscribeForm" role="form">
+
+                        {% csrf_token %}
+
+                        <input class="textbox" id="id_email" name="email" placeholder="Your email" />
+
+                        <input type="submit" value="Submit" class="css_button_4" />
+                    
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <script>
+
+        $(window).load(function() {  
+
+            //var sixMonths = new Date(new Date().valueOf() + 6 * 30 * 24 * 60 * 60 * 1000);
+            var sixMonths   = new Date('06 18 2015 17:00:00 GMT+01000') 
+
+            $('#clock').countdown(sixMonths).on('update.countdown', function(event) {
+                var $this = $(this).html(event.strftime(''
+                  + '<span class="clock">%-D</span> '
+                  + '<span class="clock">:</span>'
+
+
+                  + '<span class="clock">%H</span>'
+                  + '<span class="clock">:</span>'
+
+                  + '<span class="clock">%M</span>'
+                  + '<span class="clock">:</span>'
+
+                  + '<span class="clock">%S</span>'
+                ));
+
+                'days. hr, min, sec'
+            });
+
+        });
+
+        </script>
+
+
+    </body>
+</html>
