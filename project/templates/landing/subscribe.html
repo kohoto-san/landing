@@ -38,6 +38,8 @@
 
             <div class="subscribe" style="margin-left:auto; margin-right:auto;">
 
+                {% autoescape on %}
+
                     <form action="/subscribe" method="post" id="subscribeForm" role="form" style="margin-left: auto;
                     margin-right: auto;">
 
@@ -50,6 +52,8 @@
                         <input type="submit" value="Submit" class="css_button_4" />
                     
                     </form>
+
+                {% endautoescape %}
 
             </div>
 

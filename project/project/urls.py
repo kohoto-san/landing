@@ -8,7 +8,7 @@ urlpatterns = patterns('',
     # url(r'^$', 'project.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^my-admin-panel66/', include(admin.site.urls)),
     #url(r'^$', 'landing.views.emails', name='landing'),
     #url(r'^$', views.EmailsView.as_view(), name="index"),
     url(r'^$', views.landing, name="index"),

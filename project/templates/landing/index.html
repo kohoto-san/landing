@@ -70,6 +70,8 @@
 
                 <div class="subscribe">
 
+                {% autoescape on %}
+
                     <form action="/subscribe" method="post" id="subscribeForm" role="form">
 
                         {% csrf_token %}
@@ -79,6 +81,8 @@
                         <input type="submit" value="Submit" class="css_button_4" />
                     
                     </form>
+
+                 {% endautoescape %}
 
                 </div>
 
